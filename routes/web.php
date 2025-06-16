@@ -8,6 +8,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/**
+ * TESTING
+ */
+Route::view('/example-page','example-page');
+Route::view('/example-auth','example-auth');
+
+/**
+ * ADMIN ROUTE
+ */
 
 Route::prefix('admin')->name('admin.')->group(function(){
     Route::middleware([])->group(function(){
